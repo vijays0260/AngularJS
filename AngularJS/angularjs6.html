@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="app1">
+  <head>
+    <title></title>
+  </head>
+  <body>
+
+    <div ng-controller="eventctrl">
+      <h3>Grocery List</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>
+              Item
+            </th>
+            <th>
+              purchased
+            </th>
+          </tr>
+        </thead>
+        <tr ng-repeat="grocery in groceries">
+          <td>
+            {{groceries.item}}
+          </td>
+          <input type="checkbox" ng-model="grocery purchased" />
+        </tr>
+      </table>
+      <br>
+
+      <label>New Item:
+        <input type="text" ng-model="newItem" />
+      </label>
+      <button ng-click="addItem(newItem)">Add Item</button>
+      <h4>{{missingNewItemError}}</h4>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+
+    <script src="js/angularjs6.js">
+
+    </script>
+  </body>
+</html>
