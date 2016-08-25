@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="app1">
+  <head>
+    <title></title>
+
+
+  </head>
+  <body>
+    <div ng-controller="eventctrl">
+
+    <p>
+      <input type="checkbox" ng-model="daytimebutton">Morning
+    </p>
+
+    <p ng-hide="!daytimebutton">Good Morning
+
+    </p>
+    <p ng-hide="daytimebutton">Good evening
+
+    </p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+
+    <script src="js/angular4.js">
+
+    </script>
+  </body>
+</html>
